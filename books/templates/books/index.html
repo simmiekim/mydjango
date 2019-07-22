@@ -1,0 +1,25 @@
+{% extends "base_books.html" %}
+
+{% block content %}
+
+    <h2>Books Management System</h2>
+    <ul>
+        {% for modelname in model_list %}
+            <!-- 1. <li>{{ modelname }}</li> -->
+            <!-- 2. with를 이용하여 템플릿 변수 만들어 사용 -->
+            <!-- 3. href 링크 걸기 -->
+            <li><a href="/books/{{ modelname|lower }}">{{ modelname }}</a></li>
+
+            <!--4. url 템플릿 이용 ( namespace url ) -->
+            <!-- <li><a href="{% url 'books:book_list' %}">{{ modelname }}</a></li> -->
+
+            <!-- urlvar 변수 만들어 처리하면 에러 발생 -->
+            <!--            {% with "/books:"|add:modelname|lower|add:"_list" as urlvar %}-->
+            <!--                <li>{{urlvar}}-{{ modelname }}</li>-->
+            <!--                <li><a href="{ % url urlvar % }">{{ modelname }}</a></li>-->
+            <!--                에러발생으로  { % 공백줌-->
+            <!--            {% endwith %}-->
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
