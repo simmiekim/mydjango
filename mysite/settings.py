@@ -135,14 +135,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 #------------------------------------------------------
 # AWS 등록
 
-AWS_ACCESS_KEY_ID = 'AKIAQ7I53MZPLOXZQU5L'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_REGION = 'ap-northeast-2'
-AWS_STORAGE_BUCKET_NAME='imsisample'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl' : 'max-age=86400',
-}
-
-DEFAULT_FILE_STORAGE = 'mysite.asset_storage.MediaStorage'
+# AWS_ACCESS_KEY_ID = 'AKIAQ7I53MZPLOXZQU5L'
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_REGION = 'ap-northeast-2'
+# AWS_STORAGE_BUCKET_NAME='imsisample'
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_REGION)
+# AWS_S3_OBJECT_PARAMETERS = {
+#     'CacheControl' : 'max-age=86400',
+# }
+#
+# DEFAULT_FILE_STORAGE = 'mysite.asset_storage.MediaStorage'
 
